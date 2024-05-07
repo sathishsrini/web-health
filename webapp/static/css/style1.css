@@ -1,0 +1,438 @@
+body {
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;    margin: 0; /* Remove default margin */
+     /* This is what makes the image cover the entire screen */
+  }
+  main{
+    padding: 20px;
+  }
+  #home{
+    padding: 50px; /* Remove default padding */
+    height: 100vh; /* Make sure the body covers the whole viewport */
+    background-image: url('/static/images/rur2.jpg'); /* Path to your image */
+    background-position: center center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-attachment: fixed; /* Optional: Fixes the background image during scroll */
+    background-size: cover;
+  }
+  #home .hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 50%;
+    height: 350px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white for glass effect */
+    backdrop-filter: blur(10px); /* Blur effect for the background */
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for a more defined edge */
+    animation: fadeIn 1s forwards;
+    opacity: 0;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .hero {
+    text-align: center;
+    margin-top: 100px;
+    animation: fade-right 1s ease-in-out;
+  }
+  
+  @keyframes fade-right {
+    0% {
+        opacity: 0;
+        transform: translateX(-30%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+  h2 {
+    color: red;
+    font-size: 30px;
+    font-weight: lighter;
+    justify-content: center;
+    position: relative; /* Add position relative to the parent element */
+  }
+  
+  h2::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px; /* Thickness of the underline */
+    bottom: -10px; /* Distance from the bottom of the text */
+    left: 50%;
+    background-color: rgb(255, 255, 255); /* Color of the underline */
+    transition: width 0.3s ease, left 0.3s ease; /* Smooth transition for the underline */
+  }
+  
+  /* Animation on hover */
+  h2:hover::after {
+    width: 100%; /* Full width of the text */
+    left: 0; /* Start from the left edge */
+  }
+  
+  .hero h1{
+    color:rgb(236, 231, 240);
+    font-size: 40px;
+    font-weight: lighter;
+    justify-content: center;
+    width: 100%;
+  }
+  #about{
+    text-align: center;
+  }
+  .button-container button {
+    margin-top: 50px;
+    width: 250px;
+    height: 250px;
+    border: 2px solid rgb(255, 255, 255);
+    opacity: 1;
+    border-radius: 8%;
+    font-size: 20px;
+    box-shadow: 10px 5px 5px rgb(92, 90, 90);
+    margin-right: 40px; /* Adjust the right margin to add space between buttons */
+  }
+  .btn3{
+    background-image: url('/static/images/chat1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .btn2{
+    background-image: url('/static/images/esanjeevni.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .btn1{
+    background-image: url('/static/images/pluse.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 30px;
+  }
+  .btn4{
+    background-image: url('/static/images/delivery.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .btn1, .btn2, .btn3, .btn4, .btn5{
+    transition: transform 0.5s ease; /* Smooth transition for the transform property */
+  }
+  
+  .btn1:hover, .btn2:hover, .btn3:hover, .btn4:hover, .btn5:hover {
+    transform: scale(1.08); /* Scales up the element by 5% */
+  }
+  .container {
+    display: flex; /* Use flexbox */
+    margin-top: 20px;
+  }
+  
+  .button-container {
+    display: flex; /* Use flexbox for each button and heading pair */
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center items horizontally */
+    margin-right: 40px;
+    /* Add spacing between items */
+  }
+  
+  .button-container:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+  }
+  
+  .button-container h1 {
+    margin-top: 20px; /* Remove margin */
+    font-size: 20px; /* Adjust font size */
+    text-align: center;
+    font-weight: lighter; /* Center align the heading */
+  }
+  
+  #services {
+    margin-top: 50px;
+    opacity: 1;
+    border-radius: 0%;
+    border: 2px solid black;
+    padding: 0 0; /* Add padding to create some space around the content 
+    /* Apply a backdrop filter to blur the background */
+    backdrop-filter: blur(10px) grayscale(30%);
+    /* Background color for the section */
+    animation: fadeIn 3s ease-in-out; 
+  }
+  
+  /* Define the animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0; /* Start with 0 opacity */
+      transform: translateY(-20px); /* Move section up slightly */
+    }
+    100% {
+      opacity: 1; /* End with full opacity */
+      transform: translateY(0); /* Return to original position */
+    }
+  }
+  
+  .services {
+    max-width: 1200px; /* Limit the maximum width of the content */
+    margin: 0 auto; /* Center the content horizontally */
+    display: flex; /* Use flexbox for layout */
+  }
+  .services h2 {
+    color: #ff0000; /* Color of the heading */
+    font-size: 30px; /* Font size of the heading */
+    margin-bottom: 20px; /* Add margin at the bottom of the heading */
+  }
+  .services h2::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px; /* Thickness of the underline */
+    bottom: -10px; /* Distance from the bottom of the text */
+    left: 50%;
+    background-color: rgb(0, 0, 0); /* Color of the underline */
+    transition: width 0.3s ease, left 0.3s ease; /* Smooth transition for the underline */
+  }
+  .services h2:hover::after {
+    width: 100%; /* Full width of the text */
+    left: 0; /* Start from the left edge */
+  }
+  
+  
+  .services ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .services li {
+    color: #000000; /* Color of the list items */
+    font-size: 20px; /* Font size of the list items */
+    margin-bottom: 10px; /* Add margin at the bottom of each list item */
+    line-height: 1.5; /* Set the line height for better readability */
+  }
+  .services li:before {
+    content: "\2022"; /* Add bullet point before each list item */
+    color: #ff0000; /* Change the color of the bullet point */
+    font-size: 40px; /* Increase the font size of the bullet point */
+    margin-right: 10px; /* Add margin between the bullet point and the list item */
+  }
+  .image {
+    flex: 1; /* Take up remaining space */
+  }
+  
+  .image img {
+    max-width: 100%; /* Ensure image doesn't exceed its container */
+  }
+  
+  
+  .about, .contact{
+    margin-top: 100px;
+    opacity: 0;
+    animation: fade-right 2s ease-in-out forwards;
+  }
+  #contact {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space the elements evenly */
+    align-items: center; 
+    margin-top: 25px;/* Center align vertically */
+  }
+  
+  .contact {
+    margin-top: -20px;
+    flex: 1; /* Take up remaining space */
+    padding: 0 20px; /* Add padding for spacing */
+    animation: fade-left 3s ease-in-out forwards;
+    margin-left: 60px;
+    height: 400px;
+  }
+  
+  .contact h2 {
+    margin-bottom: 0;/* Add some space below the heading */
+  }
+  .contact h1{
+    font-size: 24px;
+    font-weight: lighter;
+    line-height: 2.0;
+    color: #4d4a52;
+    margin-top: 20px;
+  }
+  .image {
+    flex: 1; /* Take up remaining space */
+  }
+  
+  #contact .image img {
+    max-width: 100%;
+    width: 100%;
+    margin-left: 50px;/* Ensure image doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 350px; /* Set maximum height */
+    animation: fade-right 2s ease-in-out forwards;
+  }
+  
+  .contact button {
+    width: 250px;
+    height: 50px;
+    margin-top: -30px;
+    text-align: center;
+    border: 2px solid rgb(173, 77, 252); /* Remove default button border */
+    opacity: 1;
+    border-radius: 0 25px 25px 25px; /* Rounded corners on three sides */
+    font-size: 24px;
+    background: linear-gradient(rgb(183, 83, 241), rgb(84, 163, 253)); 
+    transition: transform 0.4s ease;/* Smooth transition for background color change */
+  }
+  
+  .contact button:hover {
+    transform: scale(1.08); 
+  }
+  
+  @keyframes fade-left {
+    0% {
+      opacity: 0;
+      transform: translateX(20%); /* Start from the right */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); /* Move to the left */
+    }
+  }
+  
+  
+  .footer {
+    width: 100%;
+    height: 300px;
+    position:relative;
+    align-items: center;
+    overflow: hidden;
+    top: 40px;
+  }
+  
+  .footer-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('/static/images/amb5.jpg') no-repeat center;
+    background-size: cover;
+    filter: brightness(0.4); /* Apply the brightness filter here */
+    z-index: 1; /* Lower z-index because this is the background */
+  }
+  
+  .footer-content {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    z-index: 2; /* Higher z-index to keep content above the background */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    left: 350px;
+    top: 20px;
+    font-size: 25px ;
+    line-height: 1.5;
+    color: #fff; /* Assuming white text for visibility */
+  }
+  
+  .call button{
+    font-size: 20px ;
+    color: #ffffff;
+    width: 300px;
+    height: 75px;
+    border: none;
+    margin-top: -20px;
+    background: linear-gradient(rgb(247, 18, 18), rgb(249, 34, 52));
+    opacity: 1;
+    left: 33%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: transform 0.4s ease; 
+  }
+  .call button:hover{
+  transform: scale(1.08); 
+  }
+  -----------------------------------------
+  footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  /* Existing CSS */
+  /* ... */
+  
+  /* Animation for navigation links */
+  .menu li a {
+    text-decoration: none;
+    color: white;
+    position: relative; /* Required for pseudo-element */
+    overflow: hidden;
+  }
+  
+  .menu li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .menu li a:hover::before {
+    transform: scaleX(1);
+  }
+  
+  /* Animation for header */
+  header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    animation: slide-down 1s ease-in-out;
+  }
+  
+  @keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  /* Animation for footer */
+  footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    animation: slide-up 1s ease-in-out;
+  }
+  
+  @keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  

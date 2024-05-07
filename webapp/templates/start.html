@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rural Health Care</title>
+    <link href="{% static 'css/style1.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<body></body>
+    <main>
+        <section id="home">
+            <div class="hero">
+                <h2>Our Mission</h2>
+                <h1>We Deliver Quality Healthcare 
+                    <br>Where There Is No Doctor In Rural Area</h1>
+                <p>Get access to healthcare services through our kiosk machines using the eSanjeevni app.</p>
+            </div>
+        </section>
+        <section id="about">
+            <div class="about">
+                <h2>Our Services</h2>
+                <p>We aim to provide accessible healthcare services to rural communities
+                     through innovative solutions like kiosk machines equipped with the eSanjeevni app.</p>
+                     <div class="container">
+                        <div class="button-container">
+                          <button class="btn1"></button>
+                          <h1>Test Basic Health Parameter</h1>
+                        </div>
+                        <div class="button-container">
+                          <button class="btn2"></button>
+                          <h1>Integrating E-sanjeevni app</h1>
+                        </div>
+                        <div class="button-container">
+                          <button class="btn3"></button>
+                          <h1>Live chat with AI</h1>
+                        </div>
+                        <div class="button-container">
+                          <button class="btn4"></button>
+                          <h1>Medicine Delivery </h1>
+                        </div>
+                      </div>
+                      
+                      
+            </div>
+        </section>
+        <section id="services">
+            <div class="services">
+                <div class="list">
+                    <h2>What You Can Acces In Kiosk Machine?</h2>
+                    <ul>
+                        <li>Biometric Authendication</li>
+                        <li>Consultation with doctors via eSanjeevni app</li>
+                        <li>Medicine delivery To Your Address</li>
+                        <li>Test Your Basic Health Parameter</li>
+                        <li>Emergency Call Service</li>
+                    </ul>
+                </div>
+                <div class="image">
+                    <img src="{% static '/images/kio2.jpg' %}" alt="Image">
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="image">
+                <img src="{% static '/images/login.jpeg' %}"alt="Image">
+            </div>
+            <div class="contact">
+                <h2>Login Here</h2>
+                <h1>Patient can login using their Username and Password</h1><br><br>
+            
+                <button class="btn5"><a href={% url 'auth_login' %}>LOGIN</a></button>
+            </div>
+            
+        </section>
+        
+        <div class="footer">
+            <div class="footer-background"></div>
+            <div class="footer-content">
+                <!-- All your footer content goes here -->
+                <p>We also Provide a Emergency Service to You and 
+                    You can Access the Amulance in 
+                    Emergency Situation</p><br>
+                <div class="call">
+                    <button id="callButton">&#9990; Emergency Call</button>
+                </div></div>
+        </div>
+    </main>
+
+</body>
+</html>

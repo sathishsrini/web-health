@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <title></title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="contents">
+    <section class="header" id="header">
+        <div class="nav-bar">
+            <div class="logo">
+                <b><p><span>V</span>IRTUAL <span>C</span>LINIC</p></b>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="/home" class="active">Home</a></li>
+                    <li><a href="{% url 'redirect_to_blynk' %}">Health CheckUp</a></li>
+                    <li><a href="/logout">LogOut</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="hero">
+            <div class="row">
+                <div class="left-sec">
+                    <div class="content" id="home">
+                        <h3>WELCOME TO KIOSK</h3>
+                        <p>"Our Kiosk machine will enable you to consult<br>
+                            with specialized Doctors"</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+           <div class="grp" id="chat">
+            <div><a href="/chat" class="v24_21"></a></div>
+            <div><a href="https://esanjeevani.mohfw.gov.in/" class="v24_22"></a></div>
+            <div><a href="/smartcard" class="v24_23"></a></div>
+        
+            <div class="v24_33"></div><span class="v24_27"> Live Chat  with AI</span>
+            <div class="v24_34"></div><span class="v24_28">E-Sanjeevani App for Doctor Consultation</span>
+            <div class="v24_35"></div><span class="v24_29">Your Smart Card</span>
+        </div>
+   
+
+      
+
+</section>
+</div>
+</body>
+</html>

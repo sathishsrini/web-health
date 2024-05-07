@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+    {% load static %}
+
+    
+<!-- Mirrored from themesbrand.com/chatvia/layouts/auth-register.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Mar 2024 05:31:40 GMT -->
+<head>
+        
+        <meta charset="utf-8" />
+        <title>Register</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Responsive Bootstrap 5 Chat App" name="description" />
+        <meta content="Themesbrand" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="{% static '/images/favicon.ico' %}">
+
+        <!-- Bootstrap Css -->
+        <link href="{% static '/css/bootstrap.min.css' %}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="{% static '/css/icons.min.css' %}" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="{% static '/css/app.min.css' %}" id="app-style" rel="stylesheet" type="text/css" />
+
+
+    </head>
+
+    <body>
+
+
+        <div class="account-pages my-5 pt-sm-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6 col-xl-5">
+                        <div class="text-center mb-4">
+                            <a href="home.html" class="auth-logo mb-5 d-block">
+                                
+                                <img src="{% static '/images/logo-light.png' %}" alt="" height="30" class="logo logo-light">
+                            </a>
+
+                            <h4>Sign Up</h4>
+                            
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <div class="p-3">
+                                    <form action="" method="post" id='submit_newuser' class="login-form mt-4">
+                                        {% csrf_token %}
+
+                                        <div class="mb-3">
+                                            <label class="form-label">Email</label>
+                                            <div class="input-group bg-light-subtle rounded-3  mb-3">
+                                                <span class="input-group-text text-muted" id="basic-addon5">
+                                                    <i class="ri-mail-line"></i>
+                                                </span>
+                                                <input name="emailid" type="email" class="form-control form-control-lg bg-light-subtle border-light" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="basic-addon5">
+                                                
+                                            </div>
+                                        </div>
+    
+                                        <div class="mb-3">
+                                            <label class="form-label">Username</label>
+                                            <div class="input-group bg-light-subtle mb-3 rounded-3">
+                                                <span class="input-group-text border-light text-muted" id="basic-addon6">
+                                                    <i class="ri-user-2-line"></i>
+                                                </span>
+                                                <input name="username" type="text" class="form-control form-control-lg bg-light-subtle border-light" placeholder="Enter Username" aria-label="Enter Username" aria-describedby="basic-addon6">
+                                                
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-4">
+                                            <label class="form-label">Password</label>
+                                            <div class="input-group bg-light-subtle mb-3 rounded-3">
+                                                <span class="input-group-text border-light text-muted" id="basic-addon7">
+                                                    <i class="ri-lock-2-line"></i>
+                                                </span>
+                                                <input name="password" type="password" class="form-control form-control-lg bg-light-subtle border-light" placeholder="Enter Password" aria-label="Enter Password" aria-describedby="basic-addon7">
+                                                
+                                            </div>
+                                        </div>
+
+
+                                        <div class="d-grid">
+                                            <button class="btn btn-primary waves-effect waves-light" type="submit">Sign Up</button>
+                                        </div>
+
+                                        
+                                        
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 text-center">
+                            <p>Already have an account ? <a href="/" class="fw-medium text-primary"> Signin </a> </p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end account-pages -->
+
+
+
+        <!-- JAVASCRIPT -->
+        <script src="{% static '/libs/jquery/jquery.min.js' %}"></script>
+        <script src="{% static '/libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static '/libs/simplebar/simplebar.min.js' %}"></script>
+        <script src="{% static '/libs/node-waves/waves.min.js' %}"></script>
+
+        <script src="{% static '/js/app.js' %}"></script>
+
+    </body>
+
+<!-- Mirrored from themesbrand.com/chatvia/layouts/auth-register.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Mar 2024 05:31:40 GMT -->
+</html>

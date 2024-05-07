@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blynk Data</title>
+</head>
+<body>
+    <h1>Blynk Device Data</h1>
+    {% for key, value in blynk_data.items %}
+        <p>{{ key }}: {{ value }}</p>
+    {% endfor %}
+</body>
+</html>
+
+            
